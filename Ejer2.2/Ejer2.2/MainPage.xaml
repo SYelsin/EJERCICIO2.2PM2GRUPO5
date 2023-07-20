@@ -1,0 +1,27 @@
+﻿<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Ejer2.MainPage">
+    <ContentPage.Content>
+        <StackLayout>
+            <ListView x:Name="listView"
+                      ItemsSource="{Binding}"
+                      ItemSelected="OnPostSelected">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <StackLayout Padding="10" VerticalOptions="CenterAndExpand">
+                                <Label Text="{Binding Title}"
+                                       FontSize="15"
+                                       FontAttributes="Bold" />
+                                <Label Text="{Binding Description}"
+                                       FontSize="14"
+                                       LineBreakMode="WordWrap"
+                                       TextColor="#666666" />
+                            </StackLayout>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
